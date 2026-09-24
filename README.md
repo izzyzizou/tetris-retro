@@ -1,5 +1,8 @@
 # Tetris Retro
 
+[![CI](https://github.com/izzyzizou/tetris-retro/actions/workflows/ci.yml/badge.svg)](https://github.com/izzyzizou/tetris-retro/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 A neon-soaked, synthwave-flavoured Tetris for the browser — built with **TypeScript**, **Vite** and the **Canvas 2D** / **Web Audio** APIs. No game engine, no image or audio assets: every block sprite is drawn in code and all music and sound effects are synthesised live as 8-bit chiptune.
 
 ## Features
@@ -72,3 +75,20 @@ src/
     ├── audio.ts       # Web Audio chiptune music and sound effects
     └── storage.ts     # High scores & settings in localStorage
 ```
+
+## Contributing
+
+Contributions are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for how to set up the project, run the checks and open a pull request.
+
+## License
+
+Released under the [MIT License](LICENSE) © 2026 Izzat Abdujabbarov.
+
+### Third-party notices
+
+- *Korobeiniki*, the melody used for the in-game music, is a 19th-century Russian folk song in the public domain; the chiptune arrangement is synthesised in code.
+- The [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P) font by CodeMan38 is loaded from Google Fonts and is licensed under the SIL Open Font License 1.1. It is not bundled in this repository.
+
+### Disclaimer
+
+This is an unofficial fan project made for fun and learning. It is not affiliated with, endorsed by or sponsored by The Tetris Company. Tetris® is a registered trademark of The Tetris Company, LLC.
