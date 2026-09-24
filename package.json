@@ -1,0 +1,38 @@
+{
+  "name": "tetris-retro",
+  "private": true,
+  "version": "1.0.0",
+  "description": "A neon-soaked retro Tetris for the browser, written in TypeScript.",
+  "license": "MIT",
+  "author": "Izzat Abdujabbarov",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/izzyzizou/tetris-retro.git"
+  },
+  "homepage": "https://github.com/izzyzizou/tetris-retro#readme",
+  "bugs": {
+    "url": "https://github.com/izzyzizou/tetris-retro/issues"
+  },
+  "keywords": [
+    "tetris",
+    "game",
+    "retro",
+    "typescript",
+    "vite",
+    "canvas",
+    "web-audio"
+  ],
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2",
+    "vite": "^8.3.1",
+    "vitest": "^5.0.1"
+  }
+}

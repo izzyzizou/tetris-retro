@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+    <meta name="theme-color" content="#0b0620" />
+    <meta name="description" content="A neon-soaked retro Tetris for the browser." />
+    <title>Tetris Retro</title>
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="backdrop" aria-hidden="true">
+      <div class="sun"></div>
+      <div class="horizon-grid"></div>
+    </div>
+
+    <div class="app">
+      <header class="title-bar">
+        <h1 class="logo" aria-label="Tetris">
+          <span style="--c: #ff4d6d">T</span><span style="--c: #ff9f1c">E</span><span style="--c: #ffd23f">T</span><span style="--c: #3ee07f">R</span><span style="--c: #2de2ff">I</span><span style="--c: #b76bff">S</span>
+        </h1>
+        <button class="icon-btn" id="mute-btn" type="button" aria-label="Toggle sound" title="Toggle sound (M)">♪</button>
+      </header>
+
+      <main class="game">
+        <aside class="panel panel-left">
+          <section class="box">
+            <h2>HOLD</h2>
+            <canvas id="hold" class="preview preview-hold"></canvas>
+          </section>
+          <section class="box stats">
+            <div class="stat">
+              <span class="label">SCORE</span>
+              <span class="value" id="score">0</span>
+            </div>
+            <div class="stat">
+              <span class="label">HI-SCORE</span>
+              <span class="value hi" id="hiscore">0</span>
+            </div>
+            <div class="stat-row">
+              <div class="stat">
+                <span class="label">LEVEL</span>
+                <span class="value" id="level">1</span>
+              </div>
+              <div class="stat">
+                <span class="label">LINES</span>
+                <span class="value" id="lines">0</span>
+              </div>
+            </div>
+            <div class="level-bar" aria-hidden="true"><div id="level-progress"></div></div>
+          </section>
+        </aside>
+
+        <div class="board-frame" id="board-frame">
+          <canvas id="board"></canvas>
+          <div class="overlay" id="overlay"></div>
+        </div>
+
+        <aside class="panel panel-right">
+          <section class="box">
+            <h2>NEXT</h2>
+            <canvas id="next" class="preview preview-next"></canvas>
+          </section>
+          <section class="box keys">
+            <h2>KEYS</h2>
+            <dl>
+              <dt>← →</dt><dd>MOVE</dd>
+              <dt>↓</dt><dd>SOFT</dd>
+              <dt>SPACE</dt><dd>DROP</dd>
+              <dt>↑ X</dt><dd>ROT ↻</dd>
+              <dt>Z</dt><dd>ROT ↺</dd>
+              <dt>C</dt><dd>HOLD</dd>
+              <dt>P</dt><dd>PAUSE</dd>
+              <dt>M</dt><dd>SOUND</dd>
+            </dl>
+          </section>
+        </aside>
+      </main>
+
+      <div class="touch-controls" id="touch-controls">
+        <div class="pad">
+          <button type="button" data-action="hold" class="small">HOLD</button>
+          <button type="button" data-action="rotateCCW">↺</button>
+          <button type="button" data-action="rotateCW">↻</button>
+          <button type="button" data-action="pause" class="small">II</button>
+        </div>
+        <div class="pad">
+          <button type="button" data-action="left">◀</button>
+          <button type="button" data-action="softDrop">▼</button>
+          <button type="button" data-action="hardDrop">⤓</button>
+          <button type="button" data-action="right">▶</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="crt" aria-hidden="true"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
