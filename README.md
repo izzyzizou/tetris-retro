@@ -5,6 +5,8 @@
 
 A neon-soaked, synthwave-flavoured Tetris for the browser — built with **TypeScript**, **Vite** and the **Canvas 2D** / **Web Audio** APIs. No game engine, no image or audio assets: every block sprite is drawn in code and all music and sound effects are synthesised live as 8-bit chiptune.
 
+![Tetris Retro gameplay: a Tetris line clear with the hold piece, next queue and score panel](docs/screenshot.png)
+
 ## Features
 
 **Gameplay (modern guideline rules)**
